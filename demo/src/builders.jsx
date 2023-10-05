@@ -80,6 +80,38 @@ export const buildElement = ({ trackId, start, end, i }) => {
     title: randomTitle(),
     start,
     end,
+    tooltipStartText: "Start",
+    tooltipEndText: "Slut",
+    titleStyle: {
+      display: "flex",
+      flex: 1,
+      width: "100%",
+      justifyContent: "center",
+      alignItems: "center",
+      whiteSpace: "nowrap", 
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      textAlign: "center",
+      lineHeight: 1
+    },
+    continuing: <div style={{ 
+      display: "flex",
+      flex: 1,
+      lineHeight: 1, 
+      whiteSpace: "nowrap", 
+      overflow: "hidden", 
+      textOverflow: "ellipsis",
+      justifyContent: "center",
+      alignItems: "flex-start",
+      width: "100%",
+      textAlign: "center",
+      fontWeight: 500 }}>
+        <span style={{      
+          textOverflow: "ellipsis",
+          justifyContent: "center",
+          whiteSpace: "nowrap", 
+          overflow: "hidden", 
+        }}>asdasdasdkajdskjlashs</span></div>,
     style: {
       backgroundColor: `#${bgColor}`,
       color,

@@ -19,6 +19,8 @@ interface Props {
   altId?: string;
   clickElement?: (props: Props) => void;
   continuing?: ReactNode;
+  tooltipStartText?: string;
+  tooltipEndText?: string;
 }
 
 export type ClickElementHandler = (props: Props) => void;
@@ -40,6 +42,8 @@ const Element: FunctionComponent<Props> = (props) => {
     altId,
     clickElement,
     continuing,
+    tooltipStartText,
+    tooltipEndText,
   } = props;
 
   const handleClick = () => {
@@ -79,6 +83,8 @@ const Element: FunctionComponent<Props> = (props) => {
         tooltipStyle={tooltipStyle}
         altId={altId}
         continuing={continuing}
+        tooltipStartText={tooltipStartText}
+        tooltipEndText={tooltipEndText}
       />
     </div>
   );
