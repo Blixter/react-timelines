@@ -1,8 +1,8 @@
 {
   "name": "react-timelines.ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React Timelines with Typescript support",
-  "homepage": "https://nicholasgriffintn.github.io/react-timelines/",
+  "homepage": "https://github.com/Blixter/react-timelines",
   "main": "lib/src/index.js",
   "scripts": {
     "build:css": "node-sass src/scss/style.scss lib/css/style.css",
