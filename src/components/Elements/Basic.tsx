@@ -31,6 +31,8 @@ interface Props {
   tooltipFollowCursor?: boolean;
   altId?: string;
   continuing?: ReactNode;
+  tooltipStartText?: string;
+  tooltipEndText?: string;
 }
 
 const Basic: FunctionComponent<Props> = (props) => {
@@ -48,6 +50,8 @@ const Basic: FunctionComponent<Props> = (props) => {
     tooltipFollowCursor,
     altId,
     continuing,
+    tooltipStartText,
+    tooltipEndText,
   } = props;
 
   const defaultTooltipStyle: CSSProperties = {
@@ -70,9 +74,9 @@ const Basic: FunctionComponent<Props> = (props) => {
       {...buildDataAttributes(dataSet)}
     >
       <div className="rt-element__content" aria-hidden="true">
-        <span className="rt-element__title" style={titleStyle}>
-          {title}
-        </span>
+        <div className="rt-element__title" style={titleStyle}>
+          <span className="rt-element__title__text">{title}</span>
+        </div>
         {continuing || <></>}
       </div>
       {tooltip ? (
@@ -87,15 +91,17 @@ const Basic: FunctionComponent<Props> = (props) => {
           noArrow={true}
           place="top"
           offset={25}
-          delayShow={300}
-          delayHide={300}
+          delayShow={500}
+          delayHide={200}
         >
           <div>{title}</div>
           <div>
-            <strong>Start</strong> {getDayMonth(start)}
+            <strong>{tooltipStartText ? tooltipStartText : "Start"}</strong>{" "}
+            {getDayMonth(start)}
           </div>
           <div>
-            <strong>End</strong> {getDayMonth(end)}
+            <strong>{tooltipEndText ? tooltipEndText : "End"}</strong>{" "}
+            {getDayMonth(end)}
           </div>
         </Tooltip>
       )}

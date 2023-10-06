@@ -1,8 +1,8 @@
 /* eslint-disable import/no-unresolved */
 import { Component } from "react";
-import Timeline from "react-timelines-updated";
+import Timeline from "../../src/index";
 
-import "react-timelines-updated/lib/css/style.css";
+import "../../src/scss/style.scss"
 
 import { START_YEAR, NUM_OF_YEARS, NUM_OF_TRACKS } from "./constants";
 import { buildTimebar, buildTrack } from "./builders";
@@ -95,7 +95,7 @@ class App extends Component {
           tracks={tracks}
           now={now}
           toggleTrackOpen={this.handleToggleTrackOpen}
-          enableSticky
+          enableSticky={false}
           scrollToNow
         />
       </div>
