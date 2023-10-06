@@ -111,7 +111,7 @@ export const buildElement = ({ trackId, start, end, i }) => {
           justifyContent: "center",
           whiteSpace: "nowrap", 
           overflow: "hidden", 
-        }}>asdasdasdkajdskjlashs</span></div>,
+        }}>Subheader</span></div>,
     style: {
       backgroundColor: `#${bgColor}`,
       color,
