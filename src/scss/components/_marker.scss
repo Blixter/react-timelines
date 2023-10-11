@@ -31,6 +31,7 @@
 }
 
 .rt-marker--custom {
+  z-index: 1 !important;
   color: $react-timelines-marker-custom-background-color;
   border-color: rgba(
     $react-timelines-marker-custom-background-color,
