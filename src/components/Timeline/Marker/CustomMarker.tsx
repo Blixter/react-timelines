@@ -1,5 +1,4 @@
 import createTime from "../../../utils/time";
-import { getDayMonth } from "../../../utils/formatDate";
 import Marker from "./Marker";
 
 interface Props {
@@ -7,12 +6,13 @@ interface Props {
   date: Date;
   visible?: boolean;
   highlighted?: boolean;
-  customText: string;
-  displayLabel: boolean
+  customText1: string;
+  customText2: string;
+  displayLabel: boolean;
 }
 
 export default function CustomMarker(props: Props): JSX.Element {
-  const { time, date, visible, customText, displayLabel } = props;
+  const { time, date, visible, customText1, customText2, displayLabel } = props;
   return (
     <Marker
       modifier="custom"
@@ -21,9 +21,8 @@ export default function CustomMarker(props: Props): JSX.Element {
       displayLabel={displayLabel}
     >
       <div>
-        <div>
-          <strong>{customText ?? getDayMonth(date)}</strong>
-        </div>
+        <div>{customText1}</div>
+        <strong>{customText2}</strong>
       </div>
     </Marker>
   );

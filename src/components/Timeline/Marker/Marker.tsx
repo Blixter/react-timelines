@@ -10,7 +10,14 @@ interface Props {
 }
 
 export default function Marker(props: Props): JSX.Element {
-  const { children, highlighted, modifier, visible, x, displayLabel = true } = props;
+  const {
+    children,
+    highlighted,
+    modifier,
+    visible,
+    x,
+    displayLabel = true,
+  } = props;
   return (
     <div
       className={`rt-marker rt-marker--${modifier} ${

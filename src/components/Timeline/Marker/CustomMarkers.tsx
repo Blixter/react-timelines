@@ -10,14 +10,24 @@ const CustomMarkers: React.FC<{
   return (
     <div>
       {markerCells.map((x) => (
-        <CustomMarker
-          key={x.id}
-          date={x.start}
-          time={time}
-          customText={x.title}
-          visible
-          displayLabel={true}
-        />
+        <React.Fragment key={x.id}>
+          <CustomMarker
+            date={x.start}
+            time={time}
+            customText1={"Start"}
+            customText2={x.title}
+            visible
+            displayLabel={true}
+          />
+          <CustomMarker
+            date={x.end}
+            time={time}
+            customText1={"End"}
+            customText2={x.title}
+            visible
+            displayLabel={true}
+          />
+        </React.Fragment>
       ))}
     </div>
   );
