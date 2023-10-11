@@ -35,6 +35,7 @@ export const buildQuarterCells = () => {
       title: `Q${quarter} ${s.year}`,
       start: new Date(`${s.year}-${s.month}-01`),
       end: new Date(`${e.year}-${e.month}-01`),
+      displayMarker: true
     });
   }
   return v;

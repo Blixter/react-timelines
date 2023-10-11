@@ -8,6 +8,7 @@ export interface Cell {
   start: Date;
   time?: TimeSettings;
   title: string;
+  displayMarker?: boolean;
 }
 
 export interface Element {

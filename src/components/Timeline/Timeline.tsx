@@ -10,6 +10,7 @@ import Body from "./Body";
 import NowMarker from "./Marker/NowMarker";
 import PointerMarker from "./Marker/PointerMarker";
 import { ClickElementHandler } from "./Tracks/Element";
+import CustomMarkers from "./Marker/CustomMarkers";
 
 interface Props {
   now?: Date;
@@ -55,6 +56,10 @@ class Timeline extends Component<Props, State> {
 
     const { pointerDate, pointerVisible, pointerHighlighted } = this.state;
 
+    const markerCells = timebar
+      .flatMap((x) => x.cells)
+      .filter((x) => x.displayMarker === true);
+
     const grid = getGrid(timebar);
     return (
       <div className="rt-timeline" style={{ width: time.timelineWidthStyle }}>
@@ -67,6 +72,7 @@ class Timeline extends Component<Props, State> {
             highlighted={pointerHighlighted}
           />
         )}
+        <CustomMarkers markerCells={markerCells} time={time} />
         <Header
           time={time}
           timebar={timebar}

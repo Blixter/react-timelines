@@ -30,6 +30,14 @@
   );
 }
 
+.rt-marker--custom {
+  color: $react-timelines-marker-custom-background-color;
+  border-color: rgba(
+    $react-timelines-marker-custom-background-color,
+    $react-timelines-marker-line-transparency
+  );
+}
+
 .rt-marker--pointer.rt-is-highlighted {
   color: darken($react-timelines-marker-pointer-background-color, 25%);
   border-color: rgba(darken($react-timelines-marker-pointer-background-color, 1), 25%);
