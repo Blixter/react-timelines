@@ -6,10 +6,11 @@ interface Props {
   modifier: string;
   visible?: boolean;
   x: number;
+  displayLabel?: boolean;
 }
 
 export default function Marker(props: Props): JSX.Element {
-  const { children, highlighted, modifier, visible, x } = props;
+  const { children, highlighted, modifier, visible, x, displayLabel = true } = props;
   return (
     <div
       className={`rt-marker rt-marker--${modifier} ${
@@ -17,9 +18,11 @@ export default function Marker(props: Props): JSX.Element {
       } ${highlighted ? "rt-is-highlighted" : ""}`}
       style={{ left: `${x}px` }}
     >
-      <div className="rt-marker__label">
-        <div className="rt-marker__content">{children}</div>
-      </div>
+      {displayLabel && (
+        <div className="rt-marker__label">
+          <div className="rt-marker__content">{children}</div>
+        </div>
+      )}
     </div>
   );
 }
