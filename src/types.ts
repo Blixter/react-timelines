@@ -9,6 +9,7 @@ export interface Cell {
   time?: TimeSettings;
   title: string;
   displayMarker?: boolean;
+  displayMarkerLabel?: boolean;
 }
 
 export interface Element {
