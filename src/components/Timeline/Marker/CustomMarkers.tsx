@@ -17,7 +17,7 @@ const CustomMarkers: React.FC<{
             customText1={"Start"}
             customText2={x.title}
             visible
-            displayLabel={true}
+            displayLabel={x.displayMarkerLabel ?? false}
           />
           <CustomMarker
             date={x.end}
@@ -25,7 +25,7 @@ const CustomMarkers: React.FC<{
             customText1={"End"}
             customText2={x.title}
             visible
-            displayLabel={true}
+            displayLabel={x.displayMarkerLabel ?? false}
           />
         </React.Fragment>
       ))}
