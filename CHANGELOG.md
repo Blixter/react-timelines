@@ -1,3 +1,9 @@
+## [1.0.3] - 2023-11-20
+
+### Changed
+
+- Releases now includes scss files
+
 ## [1.0.2] - 2023-10-02
 
 ### Changed
