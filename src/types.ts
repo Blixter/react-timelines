@@ -8,8 +8,11 @@ export interface Cell {
   start: Date;
   time?: TimeSettings;
   title: string;
+  titleStyle?: CSSProperties;
   displayMarker?: boolean;
   displayMarkerLabel?: boolean;
+  subTitle?: string;
+  subTitleStyle?: CSSProperties;
 }
 
 export interface Element {
