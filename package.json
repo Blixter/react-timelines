@@ -1,6 +1,6 @@
 {
   "name": "react-timelines.ts",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "React Timelines with Typescript support",
   "homepage": "https://github.com/Blixter/react-timelines",
   "main": "lib/src/index.js",

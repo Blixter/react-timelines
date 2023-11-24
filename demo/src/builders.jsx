@@ -52,6 +52,8 @@ export const buildMonthCells = () => {
       title: MONTH_NAMES[i % 12],
       start,
       end,
+      subTitle: "subtitle",
+      subTitleStyle: {fontSize: "11px", overflow: "hidden", textOverflow: "ellipsis", textWrap: "nowrap"}
     });
   }
   return v;

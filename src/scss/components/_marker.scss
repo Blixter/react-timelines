@@ -3,7 +3,7 @@
   z-index: 2;
   top: $react-timelines-header-row-height;
   bottom: 0;
-  margin-left: -($react-timelines-marker-line-width / 2);
+  margin-left: - calc($react-timelines-marker-line-width / 2);
   border-left: $react-timelines-marker-line-width solid;
   opacity: 0;
   pointer-events: none;
@@ -66,7 +66,7 @@
     top: 100%;
     left: 50%;
     margin-left: -$size;
-    transform: translateX(-($react-timelines-marker-line-width / 2));
+    transform: translateX(- calc($react-timelines-marker-line-width / 2));
     border-left: $size solid transparent;
     border-right: $size solid transparent;
     border-top: $size solid currentColor;
